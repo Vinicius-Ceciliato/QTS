@@ -50,6 +50,33 @@ function habilitacao(idade) {
         else {return 'não pode dirigir'};
 }
 
+function semestre (mes) {
+    mes.trim();
+    if(mes=='janeiro') {return 'primeiro semestre'};
+    if(mes=='fevereiro') {return 'primeiro semestre'};
+    if(mes=='março' || mes=='marco') {return 'primeiro semestre'};
+    if(mes=='abril') {return 'primeiro semestre'};
+    if(mes=='maio') {return 'primeiro semestre'};
+    if(mes=='junho') {return 'primeiro semestre'};
+    if(mes=='julho') {return 'segundo semestre'};
+    if(mes=='agosto') {return 'segundo semestre'};
+    if(mes=='setembro') {return 'segundo semestre'};
+    if(mes=='outubro') {return 'segundo semestre'};
+    if(mes=='novembro') {return 'segundo semestre'};
+    if(mes=='dezembro') {return 'segundo semestre'};
+};
+
+function vogalConsoante(letra) {
+    if(letra== 'a' || letra=='e' || letra=='i' || letra=='o' || letra=='u') {
+        return 'vogal';
+    } else {return 'vogal'};
+};
+
+function media(array) {
+    let array = []
+}
 
 
-module.exports = { somar, mensagemBoasVindas, maiorValor, parImpar, positivoNegativo, idade, salario, habilitacao};
+
+
+module.exports = { somar, mensagemBoasVindas, maiorValor, parImpar, positivoNegativo, idade, salario, habilitacao, semestre, vogalConsoante};
