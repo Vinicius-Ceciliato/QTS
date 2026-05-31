@@ -73,10 +73,20 @@ function vogalConsoante(letra) {
 };
 
 function media(array) {
-    let array = []
-}
+    if (!Array.isArray(array) || array.length !== 5) {
+        alert('O parâmetro deve ser um array com 5 valores.');
+    };
 
+    const soma = array.reduce((acc, valor) => acc + valor, 0);
+    return soma / array.length;
+};
 
+function login(usuario, senha) {
+    if (usuario === 'admin' && senha === '123') {
+        return 'Conectado com sucesso';
+    } else {
+        return 'Acesso negado, usuario ou senha incorretos';
+    };
+};
 
-
-module.exports = { somar, mensagemBoasVindas, maiorValor, parImpar, positivoNegativo, idade, salario, habilitacao, semestre, vogalConsoante};
+module.exports = { somar, mensagemBoasVindas, maiorValor, parImpar, positivoNegativo, idade, salario, habilitacao, semestre, vogalConsoante, media, login};

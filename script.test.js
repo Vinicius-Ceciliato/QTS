@@ -1,4 +1,4 @@
-const { somar, mensagemBoasVindas, maiorValor, parImpar, positivoNegativo, salario, habilitacao, semestre, vogalConsoante} = require('./script');
+const { somar, mensagemBoasVindas, maiorValor, parImpar, positivoNegativo, salario, habilitacao, semestre, vogalConsoante, media, login} = require('./script');
 
 test('soma dois números', () => {
     expect(somar(2, 3)).toBe(5);
@@ -17,7 +17,7 @@ test('par ou ímpar', () => {
 });
 
 test('voto', () => {
-    expéct(idade(18).toBe('pode votar'));
+    expect(idade(18).toBe('pode votar'));
 });
 
 test('positivo ou negativo', () => {
@@ -38,4 +38,12 @@ test('semestre', () => {
 
 test('vogal ou consoante', () => {
     expect(vogalConsoante('a').toBe('vogal'));
+});
+
+test('media', () => {
+    expect(media([1, 2, 3, 4, 5]).toBe(3));
+});
+
+test('login', () => {
+    expect(login('admin', 'senha123').toBe('Conectado com sucesso'));
 });
